@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import { ThemeProvider } from '@/context/ThemeContext';
+import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
+
 
 export const metadata: Metadata = {
   title: 'To-Do App',
