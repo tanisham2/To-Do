@@ -42,26 +42,26 @@ export default function TaskForm({ onSubmit, initialData, onCancel }: TaskFormPr
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2 p-4 border rounded-lg dark:border-gray-700 mb-4">
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 p-4 border rounded-lg bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 mb-4">
       <input
         type="text"
         placeholder="Task title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        className="p-2 border rounded dark:bg-gray-800 dark:border-gray-600"
+        className="p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-white"
         required
       />
       <textarea
         placeholder="Description (optional)"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        className="p-2 border rounded dark:bg-gray-800 dark:border-gray-600"
+        className="p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-white"
       />
       <div className="flex gap-2 flex-wrap">
         <select
           value={priority}
           onChange={(e) => setPriority(e.target.value as Priority)}
-          className="p-2 border rounded dark:bg-gray-800 dark:border-gray-600"
+          className="p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-white"
         >
           <option value="high">🔴 High</option>
           <option value="medium">🟡 Medium</option>
@@ -70,7 +70,7 @@ export default function TaskForm({ onSubmit, initialData, onCancel }: TaskFormPr
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value as Category)}
-          className="p-2 border rounded dark:bg-gray-800 dark:border-gray-600"
+          className="p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-white"
         >
           <option value="study">📚 Study</option>
           <option value="work">💼 Work</option>
@@ -80,7 +80,7 @@ export default function TaskForm({ onSubmit, initialData, onCancel }: TaskFormPr
           type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
-          className="p-2 border rounded dark:bg-gray-800 dark:border-gray-600"
+          className="p-2 border rounded bg-white dark:bg-gray-800 dark:border-gray-600 text-gray-900 dark:text-white"
         />
       </div>
       <div className="flex gap-2">
@@ -88,7 +88,7 @@ export default function TaskForm({ onSubmit, initialData, onCancel }: TaskFormPr
           {initialData ? 'Update Task' : 'Add Task'}
         </button>
         {onCancel && (
-          <button type="button" onClick={onCancel} className="px-4 py-2 rounded border dark:border-gray-600">
+          <button type="button" onClick={onCancel} className="px-4 py-2 rounded border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300">
             Cancel
           </button>
         )}

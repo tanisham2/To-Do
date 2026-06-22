@@ -19,7 +19,7 @@ export default function FilterBar({ filter, setFilter, onClearCompleted }: Filte
             key={f}
             onClick={() => setFilter(f)}
             className={`px-3 py-1 rounded text-sm capitalize ${
-              filter === f ? 'bg-blue-600 text-white' : 'border dark:border-gray-600'
+              filter === f ? 'bg-blue-600 text-white' : 'border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300'
             }`}
           >
             {f}

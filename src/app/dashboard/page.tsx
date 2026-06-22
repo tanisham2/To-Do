@@ -91,7 +91,7 @@ export default function DashboardPage() {
   if (loading || !user) return <div className="p-6">Loading...</div>;
 
   return (
-    <div>
+    <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Navbar />
       <div className="max-w-2xl mx-auto p-6">
         <TaskForm onSubmit={handleAdd} />

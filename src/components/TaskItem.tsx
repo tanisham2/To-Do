@@ -56,7 +56,7 @@ export default function TaskItem({ task, index, onToggle, onDelete, onUpdate }: 
               className="mt-1"
             />
             <div>
-              <p className={`font-medium ${task.completed ? 'line-through text-gray-400' : ''}`}>
+              <p className={`font-medium ${task.completed ? 'line-through text-gray-400' : 'text-gray-900 dark:text-white'}`}>
                 {priorityEmoji[task.priority]} {task.title} {categoryEmoji[task.category]}
               </p>
               {task.description && (
@@ -68,10 +68,10 @@ export default function TaskItem({ task, index, onToggle, onDelete, onUpdate }: 
             </div>
           </div>
           <div className="flex gap-2">
-            <button onClick={() => setIsEditing(true)} aria-label="Edit task">
+            <button onClick={() => setIsEditing(true)} aria-label="Edit task" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
               <Pencil size={16} />
             </button>
-            <button onClick={() => onDelete(task.id)} aria-label="Delete task">
+            <button onClick={() => onDelete(task.id)} aria-label="Delete task" className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
               <Trash2 size={16} className="text-red-500" />
             </button>
           </div>
